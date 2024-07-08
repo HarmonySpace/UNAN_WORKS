@@ -1,0 +1,70 @@
+<div class="table-responsive">
+  <table class="table table-hover table-borderless table mt-5">
+    <thead>
+      <tr>
+        <th scope="col">Área de conocimientó</th>
+        <th scope="col">Carrera</th>
+        <th scope="col">Carnet</th>
+        <th scope="col">Modalidad</th>
+        <th scope="col">Régimen</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Año de estudio</th>
+        <th scope="col">Sexo</th>
+        <th scope="col">Componentes</th>
+        <th scope="col">Tipo de asignatura</th>
+        <th scope="col">Ciclo</th>
+        {{# data.0.i_parcial}}
+        <th scope="col">I Parcial</th>
+        {{/ data.0.i_parcial}}
+        {{# data.0.ii_parcial}}
+        <th scope="col">II Parcial</th>
+        {{/ data.0.ii_parcial}}
+        {{# data.0.iii_parcial}}
+        <th scope="col">III Parcial</th>
+        {{/ data.0.iii_parcial}}
+        {{# data.0.nota_final}}
+        <th scope="col">Nota final</th>
+        {{/ data.0.nota_final}}
+        <th scope="col">Tipo nota</th>
+        <th scope="col">Tipo Aprobación</th>
+        <th scope="col">Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{# data }}
+      <tr>
+        <th>{{ codfac }}</th>
+        <td>{{ codcarr }}</td>
+        <td>{{ carnet }}</td>
+        <td>{{ modalidad }}</td>
+        <td>{{ id_tipo_regimen }}</td>
+        <td>{{ nombre }}</td>
+        <td>{{ apellido }}</td>
+        <td>{{ anyo_lec }}</td>
+        <td>{{ sexo }}</td>
+        <td>{{ cod_asig }}</td>
+        <td>{{ tipo_asignatura }}</td>
+        <td>{{ id_tipo_ciclo }}</td>
+        {{# i_parcial}}
+        <td>{{ i_parcial }}</td>
+        {{/ i_parcial}}
+        {{# ii_parcial}}
+        <td>{{ ii_parcial }}</td>
+        {{/ ii_parcial}}
+        {{# iii_parcial}}
+        <td>{{ iii_parcial }}</td>
+        {{/ iii_parcial}}
+        {{# nota_final}}
+        <td>{{ nota_final }}</td>
+        {{/ nota_final}}
+        <td>{{ tipo_nota }}</td>
+        <td>{{ tipo_aprovacion }}</td>
+        <td>
+          <a href="/edit/{{ id }}" class="btn btn-primary">Editar</a>
+        </td>
+      </tr>
+      {{/ data }}
+    </tbody>
+  </table>
+</div>

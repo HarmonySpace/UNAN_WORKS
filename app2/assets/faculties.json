@@ -1,0 +1,158 @@
+[
+  {
+    "codfac": 1,
+    "name": "Computer Science",
+    "careers": [
+      {
+        "codcarr": 1,
+        "degree": "Bachelor of Science"
+      },
+      {
+        "codcarr": 2,
+        "degree": "Master of Science"
+      },
+      {
+        "codcarr": 3,
+        "degree": "PhD in Computer Science"
+      },
+      {
+        "codcarr": 4,
+        "degree": "Associate's Degree in Computer Science"
+      },
+      {
+        "codcarr": 5,
+        "degree": "Certificate in Computer Science"
+      }
+    ]
+  },
+  {
+    "codfac": 2,
+    "name": "Medicine",
+    "careers": [
+      {
+        "codcarr": 1,
+        "degree": "Doctor of Healing Arts"
+      },
+      {
+        "codcarr": 2,
+        "degree": "Master of Medical Science"
+      },
+      {
+        "codcarr": 3,
+        "degree": "Bachelor of Health Sciences"
+      },
+      {
+        "codcarr": 4,
+        "degree": "Associate of Medicine"
+      },
+      {
+        "codcarr": 5,
+        "degree": "Certificate in Medical Studies"
+      }
+    ]
+  },
+  {
+    "codfac": 3,
+    "name": "Business",
+    "careers": [
+      {
+        "codcarr": 1,
+        "degree": "Bachelor of Business Administration"
+      },
+      {
+        "codcarr": 2,
+        "degree": "Master of Business Administration"
+      },
+      {
+        "codcarr": 3,
+        "degree": "Associate of Business"
+      },
+      {
+        "codcarr": 4,
+        "degree": "Doctorate in Business Management"
+      },
+      {
+        "codcarr": 5,
+        "degree": "Diploma in Business Studies"
+      }
+    ]
+  },
+  {
+    "codfac": 4,
+    "name": "Engineering",
+    "careers": [
+      {
+        "codcarr": 1,
+        "degree": "Computer Engineering"
+      },
+      {
+        "codcarr": 2,
+        "degree": "Mechanical Engineering"
+      },
+      {
+        "codcarr": 3,
+        "degree": "Civil Engineering"
+      },
+      {
+        "codcarr": 4,
+        "degree": "Electrical Engineering"
+      },
+      {
+        "codcarr": 5,
+        "degree": "Chemical Engineering"
+      }
+    ]
+  },
+  {
+    "codfac": 5,
+    "name": "Law",
+    "careers": [
+      {
+        "codcarr": 1,
+        "degree": "Bachelor of Science"
+      },
+      {
+        "codcarr": 2,
+        "degree": "Master of Arts"
+      },
+      {
+        "codcarr": 3,
+        "degree": "Doctor of Philosophy"
+      },
+      {
+        "codcarr": 4,
+        "degree": "Associate of Applied Science"
+      },
+      {
+        "codcarr": 5,
+        "degree": "Juris Doctor"
+      }
+    ]
+  },
+  {
+    "codfac": 6,
+    "name": "Social Sciences",
+    "careers": [
+      {
+        "codcarr": 1,
+        "degree": "sociologist"
+      },
+      {
+        "codcarr": 2,
+        "degree": "anthropologist"
+      },
+      {
+        "codcarr": 3,
+        "degree": "economist"
+      },
+      {
+        "codcarr": 4,
+        "degree": "psychologist"
+      },
+      {
+        "codcarr": 5,
+        "degree": "historian"
+      }
+    ]
+  }
+]
