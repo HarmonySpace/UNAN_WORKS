@@ -1,0 +1,6 @@
+<select class="form-select" id="{{select.id}}" name="{{select.id}}">
+	<option selected value="{{select.default.value}}">{{select.default.title}}</option>
+	{{# options }}
+	<option value="{{value}}">{{text}}</option>
+	{{/ options }}
+</select>

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "type": "Matutino"
+  },
+  {
+    "id": "2",
+    "type": "Vespertino"
+  },
+  {
+    "id": "3",
+    "type": "Sabatino"
+  },
+  {
+    "id": "4",
+    "type": "Dominical"
+  },
+  {
+    "id": "5",
+    "type": "Virtual"
+  }
+]
