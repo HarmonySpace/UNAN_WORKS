@@ -1,0 +1,56 @@
+[
+  {
+    "id_tipo_regimen": 1,
+    "name": "SEMESTRAL",
+    "cicle": [
+      {
+        "id": 1,
+        "name": "IMPAR"
+      },
+      {
+        "id": 2,
+        "name": "PAR"
+      }
+    ]
+  },
+  {
+    "id_tipo_regimen": 2,
+    "name": "TRIMESTRAL",
+    "cicle": [
+      {
+        "id": 1,
+        "name": "IMPART_1"
+      },
+      {
+        "id": 2,
+        "name": "PART_1"
+      },
+      {
+        "id": 3,
+        "name": "IMPART_2"
+      },
+      {
+        "id": 4,
+        "name": "PART_2"
+      }
+    ]
+  },
+  {
+    "id_tipo_regimen": 2,
+    "name": "CUATRIMESTRAL",
+    "cicle": [
+      {
+        "id": 1,
+        "name": "IMPARC_1"
+      },
+      {
+        "id": 2,
+        "name": "PARC_1"
+      },
+      {
+        "id": 3,
+        "name": "IMPARC_2"
+      }
+    ]
+  }
+]
