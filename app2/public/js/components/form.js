@@ -152,21 +152,11 @@ $(document).ready(function() {
     select3.html(rendered_careers)
   })
   select2.change(function() {
-    $.get("/src/partials/select2.mustache", function(template) {
-      const rendered_careers = Mustache.render(template, {
-        select: select3_item,
-        options: {
-          text: "Ninguno",
-          value: 0
-        }
-      })
-      select3.html(rendered_careers)
-    })
     const url3 = "/faculties/" + $("#facultaty").val() + "/careers"
     $.ajax({
       url: url3,
       type: "GET",
-      //dataType: "json",
+      dataType: "json",
       success: function(data) {
         console.log(data)
         options3 = data.careers.map((item) => {
@@ -202,37 +192,100 @@ $(document).ready(function() {
   })
 
   //get regime
-  tempData = [
-    {
-      label: "Trimestral", 
-      key: 1
+  $.ajax({
+    url: "/regimes",
+    type: "GET",
+    dataType: "json",
+    success: function(data) {
+      options5 = data.map((item) => {
+        return {
+          text: item.name,
+          value: item.id_tipo_regimen
+        }
+      })
+      console.log(options5)
     },
-    {
-      label: "Cuatrimestral", 
-      key: 2
-    },
-    {
-      label: "Semestral", 
-      key: 3
+    error: function(status, error) {
+      console.error(status, error)
     }
-  ]
-  options5 = optionsKeysGen(tempData)
+  })
   $.get("/src/partials/select2.mustache", function(template) {
-    const rendered_regime = Mustache.render(template, {
+    const rendered_regimes = Mustache.render(template, {
       select: select5_item,
       options: options5
     })
-    select5.html(rendered_regime)
+    select5.html(rendered_regimes)
   })
 
-  //get ciclo
+  //get cicles
   $.get("/src/partials/select2.mustache", function(template) {
-    const rendered_cicle = Mustache.render(template, {
+    const rendered_cicles = Mustache.render(template, {
       select: select7_item,
-      options: options7
+      options: {}
     })
-    select7.html(rendered_cicle)
+    select7.html(rendered_cicles)
   })
+  select5.change(function() {
+    const url3 = "/regimes/" + $("#regime").val() + "/cicles"
+    $.ajax({
+      url: url3,
+      type: "GET",
+      //dataType: "json",
+      success: function(data) {
+        console.log(data)
+        options7 = data.cicle.map((item) => {
+          return {
+            text: item.name,
+            value: item.id
+          }
+        })
+        console.log(options7)
+        $.get("/src/partials/select2.mustache", function(template) {
+          const rendered_cicles = Mustache.render(template, {
+            select: select7_item,
+            options: options7
+          })
+          select7.html(rendered_cicles)
+        })
+      },
+      error: function(status, error) {
+        console.error(status, error)
+      }
+    })
+  })
+
+
+  // tempData = [
+  //   {
+  //     label: "Trimestral", 
+  //     key: 1
+  //   },
+  //   {
+  //     label: "Cuatrimestral", 
+  //     key: 2
+  //   },
+  //   {
+  //     label: "Semestral", 
+  //     key: 3
+  //   }
+  // ]
+  // options5 = optionsKeysGen(tempData)
+  // $.get("/src/partials/select2.mustache", function(template) {
+  //   const rendered_regime = Mustache.render(template, {
+  //     select: select5_item,
+  //     options: options5
+  //   })
+  //   select5.html(rendered_regime)
+  // })
+
+  // //get ciclo
+  // $.get("/src/partials/select2.mustache", function(template) {
+  //   const rendered_cicle = Mustache.render(template, {
+  //     select: select7_item,
+  //     options: options7
+  //   })
+  //   select7.html(rendered_cicle)
+  // })
 
   //get partials
   tempData = ["I", "II", "III", "Final"]
