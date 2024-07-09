@@ -27,6 +27,8 @@ class Records extends Controller
         $codcarr = isset($_POST["career"]) ? $_POST["career"] : null;
         $modalidad = isset($_POST["modality"]) ? $_POST["modality"] : null;
         $id_tipo_regimen = isset($_POST["regime"]) ? $_POST["regime"] : null;
+        $id_tipo_ciclo = isset($_POST["cicle"]) ? $_POST["cicle"] : null;
+        $campo = isset($_POST["camp"]) ? $_POST["camp"] : null;
         $parcialI = isset($_POST["i"]) ? $_POST["i"] : null;
         $parcialII = isset($_POST["ii"]) ? $_POST["ii"] : null;
         $parcialIII = isset($_POST["iii"]) ? $_POST["iii"] : null;
@@ -73,6 +75,22 @@ class Records extends Controller
             if (empty($id_tipo_regimen) || $id_tipo_regimen == "todos") {
                 return ($item);
             } elseif ($item["id_tipo_regimen"] == $id_tipo_regimen) {
+                return ($item);
+            } else {
+            }
+        });
+        $data = array_filter($data, function ($item) use ($id_tipo_ciclo) {
+            if (empty($id_tipo_ciclo) || $id_tipo_ciclo == "todos") {
+                return ($item);
+            } elseif ($item["id_tipo_ciclo"] == $id_tipo_ciclo) {
+                return ($item);
+            } else {
+            }
+        });
+        $data = array_filter($data, function ($item) use ($campo) {
+            if (empty($campo) || $campo == "todos") {
+                return ($item);
+            } elseif ($item["campo"] == strtoupper($campo)) {
                 return ($item);
             } else {
             }
