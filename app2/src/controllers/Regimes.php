@@ -1,24 +1,23 @@
 <?php
 
-class Faculties extends Controller
+class Regimes extends Controller
 {
     public function __construct()
     {
         $this->dir = __DIR__ . '/../..';
-        $this->json_file = $this->dir . "/assets/faculties.json";
+        $this->json_file = $this->dir . "/assets/regimes.json";
     }
-
     public function index()
     {
         $this->get();
     }
 
-    public function careers($id)
+    public function cicles($id)
     {
         $data = $this->getOn();
-        foreach ($data as $career) {
-            if ($career['codfac'] == $id) {
-                $json_response = $career;
+        foreach ($data as $cicle) {
+            if ($cicle['cicle'] == $id) {
+                $json_response = $cicle;
             }
         }
         if ($json_response) {
@@ -26,7 +25,7 @@ class Faculties extends Controller
             header('Content-Type: application/json');
             echo $json_response;
         } else {
-            echo "DONT FIND THE FACULTATY";
+            echo "DONT FIND THE REGIME";
         }
     }
 }

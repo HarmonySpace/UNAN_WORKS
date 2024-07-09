@@ -13,23 +13,15 @@ class Records extends Controller
     {
         $this->returnView("/src/views/home.html");
     }
+
+    public function result()
+    {
+        $this->get();
+    }
+
     public function records()
     {
-        // $data = [
-        //     "anyo" => $_POST['anyo'],
-        //     "codfac" => $_POST['facultaty'],
-        //     "codcorr" => $_POST['career'],
-        //     "modalida" => $_POST['modality'],
-        //     "id_tipo_regimen" => $_POST['regime'],
-        //     "parciales" => [
-        //          "i" => $_POST['i'],
-        //          "ii" => $_POST['ii'],
-        //          "iii" => $_POST['iii'],
-        //          "final" => $_POST['final']
-        //     ]
-        // ];
         $res = $this->getOn();
-        //define vars
         $anyo = isset($_POST["anyo"]) ? $_POST["anyo"] : null;
         $codfac = isset($_POST["facultaty"]) ? $_POST["facultaty"] : null;
         $codcarr = isset($_POST["career"]) ? $_POST["career"] : null;
@@ -101,30 +93,5 @@ class Records extends Controller
             return ($item);
         }, $data);
         $this->returnView("/src/views/return.html", ["data" => json_encode($data)]);
-    }
-
-    //data functions
-    public function result()
-    {
-        $this->get();
-    }
-    //route "/find"
-    public function find($id)
-    {
-        $data_file = $this->getFileContent();
-        $object = array_filter($data_file, function ($obj) use ($id) {
-            return $obj['id'] == $id;
-        });
-        if (!empty($object)) {
-            $object = array_values($object)[0];
-            $json_response = json_encode($object);
-        } else {
-            $json_response = [
-                "res" => "error: OBJECT NOT FOUND"
-            ];
-            $json_response = json_encode($json_response);
-        }
-        header('Content-Type: application/json');
-        echo $json_response;
     }
 }

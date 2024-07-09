@@ -3,7 +3,7 @@ require_once 'vendor/autoload.php';
 require_once 'src/controllers/Controller.php';
 require_once 'src/controllers/Records.php';
 require_once 'src/controllers/Faculties.php';
-require_once 'src/controllers/Modality.php';
+require_once 'src/controllers/Regimes.php';
 require_once 'routes.php';
 
     header("Expires: Tue, 03 Jul 2001 06:00:00 GMT");
