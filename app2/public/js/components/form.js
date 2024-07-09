@@ -9,6 +9,7 @@ $(document).ready(function() {
   const select5 = $("#select5")
   const select6 = $("#select6")
   const select7 = $("#select7")
+  const select8 = $("#select8")
   //options
   let options1
   let options2
@@ -17,6 +18,7 @@ $(document).ready(function() {
   let options5
   let options6
   let options7
+  let options8
   let tempData
   //select titles and ids
   const select1_item = {
@@ -66,6 +68,13 @@ $(document).ready(function() {
     default: {
       title: "Todos",
       value: "todos"
+    }
+  }
+  const select8_item = {
+    id: "camp",
+    default: {
+      title: "No",
+      value: "no"
     }
   }
 
@@ -254,39 +263,6 @@ $(document).ready(function() {
     })
   })
 
-
-  // tempData = [
-  //   {
-  //     label: "Trimestral", 
-  //     key: 1
-  //   },
-  //   {
-  //     label: "Cuatrimestral", 
-  //     key: 2
-  //   },
-  //   {
-  //     label: "Semestral", 
-  //     key: 3
-  //   }
-  // ]
-  // options5 = optionsKeysGen(tempData)
-  // $.get("/src/partials/select2.mustache", function(template) {
-  //   const rendered_regime = Mustache.render(template, {
-  //     select: select5_item,
-  //     options: options5
-  //   })
-  //   select5.html(rendered_regime)
-  // })
-
-  // //get ciclo
-  // $.get("/src/partials/select2.mustache", function(template) {
-  //   const rendered_cicle = Mustache.render(template, {
-  //     select: select7_item,
-  //     options: options7
-  //   })
-  //   select7.html(rendered_cicle)
-  // })
-
   //get partials
   tempData = ["I", "II", "III", "Final"]
   options6 = optionsGen(tempData)
@@ -297,6 +273,15 @@ $(document).ready(function() {
     })
     select6.html(rendered_regime)
     // console.log($("#final"))
+  })
+  tempData = ["Si"]
+  options8 = optionsGen(tempData)
+  $.get("/src/partials/select2.mustache", function(template) {
+    const rendered_regime = Mustache.render(template, {
+      select: select8_item,
+      options: options8
+    })
+    select8.html(rendered_regime)
   })
 
   //form evaluation
