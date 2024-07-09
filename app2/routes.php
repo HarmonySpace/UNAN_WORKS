@@ -7,7 +7,7 @@ $routes = function (FastRoute\RouteCollector $r) {
     $r->addRoute('GET', '/faculties', 'Faculties::index');
     $r->addRoute('GET', '/faculties/{id}/careers', 'Faculties::careers');
     $r->addRoute('GET', '/regimes', 'Regimes::index');
-    $r->addRoute('GET', '/regimes/{id}/cicle', 'Regimes::cicles');
+    $r->addRoute('GET', '/regimes/{id}/cicles', 'Regimes::cicles');
 };
 
 $dispatcher = FastRoute\simpleDispatcher($routes);
