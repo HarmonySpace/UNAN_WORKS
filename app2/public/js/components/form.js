@@ -8,6 +8,7 @@ $(document).ready(function() {
   const select4 = $("#select4")
   const select5 = $("#select5")
   const select6 = $("#select6")
+  const select7 = $("#select7")
   //options
   let options1
   let options2
@@ -15,6 +16,7 @@ $(document).ready(function() {
   let options4
   let options5
   let options6
+  let options7
   let tempData
   //select titles and ids
   const select1_item = {
@@ -54,6 +56,13 @@ $(document).ready(function() {
   }
   const select6_item = {
     id: "partial",
+    default: {
+      title: "Todos",
+      value: "todos"
+    }
+  }
+  const select7_item = {
+    id: "cicle",
     default: {
       title: "Todos",
       value: "todos"
@@ -193,7 +202,6 @@ $(document).ready(function() {
   })
 
   //get regime
-  //tempData = [{ label: "Trimestral", key: 1 }, "Cuatrimestral", "Semestral"]
   tempData = [
     {
       label: "Trimestral", 
@@ -215,6 +223,15 @@ $(document).ready(function() {
       options: options5
     })
     select5.html(rendered_regime)
+  })
+
+  //get ciclo
+  $.get("/src/partials/select2.mustache", function(template) {
+    const rendered_cicle = Mustache.render(template, {
+      select: select7_item,
+      options: options7
+    })
+    select7.html(rendered_cicle)
   })
 
   //get partials
