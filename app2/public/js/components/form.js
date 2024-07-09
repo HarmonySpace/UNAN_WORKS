@@ -73,8 +73,8 @@ $(document).ready(function() {
   const select8_item = {
     id: "camp",
     default: {
-      title: "No",
-      value: "no"
+      title: "Todos",
+      value: "todos"
     }
   }
 
@@ -167,14 +167,12 @@ $(document).ready(function() {
       type: "GET",
       dataType: "json",
       success: function(data) {
-        console.log(data)
         options3 = data.careers.map((item) => {
           return {
             text: item.degree,
             value: item.codcarr
           }
         })
-        console.log(options3)
         $.get("/src/partials/select2.mustache", function(template) {
           const rendered_careers = Mustache.render(template, {
             select: select3_item,
@@ -212,7 +210,6 @@ $(document).ready(function() {
           value: item.id_tipo_regimen
         }
       })
-      console.log(options5)
     },
     error: function(status, error) {
       console.error(status, error)
@@ -241,14 +238,12 @@ $(document).ready(function() {
       type: "GET",
       //dataType: "json",
       success: function(data) {
-        console.log(data)
         options7 = data.cicle.map((item) => {
           return {
             text: item.name,
             value: item.id
           }
         })
-        console.log(options7)
         $.get("/src/partials/select2.mustache", function(template) {
           const rendered_cicles = Mustache.render(template, {
             select: select7_item,
@@ -274,7 +269,7 @@ $(document).ready(function() {
     select6.html(rendered_regime)
     // console.log($("#final"))
   })
-  tempData = ["Si"]
+  tempData = ["Si", "No"]
   options8 = optionsGen(tempData)
   $.get("/src/partials/select2.mustache", function(template) {
     const rendered_regime = Mustache.render(template, {
