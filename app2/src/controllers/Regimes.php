@@ -15,9 +15,9 @@ class Regimes extends Controller
     public function cicles($id)
     {
         $data = $this->getOn();
-        foreach ($data as $cicle) {
-            if ($cicle['cicle'] == $id) {
-                $json_response = $cicle;
+        foreach ($data as $regime) {
+            if ($regime['id_tipo_regimen'] == $id) {
+                $json_response = $regime;
             }
         }
         if ($json_response) {

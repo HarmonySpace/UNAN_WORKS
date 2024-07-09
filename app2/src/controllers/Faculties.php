@@ -16,9 +16,9 @@ class Faculties extends Controller
     public function careers($id)
     {
         $data = $this->getOn();
-        foreach ($data as $career) {
-            if ($career['codfac'] == $id) {
-                $json_response = $career;
+        foreach ($data as $fac) {
+            if ($fac['codfac'] == $id) {
+                $json_response = $fac;
             }
         }
         if ($json_response) {
