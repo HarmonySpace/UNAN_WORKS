@@ -179,6 +179,18 @@
       "selectionStyle": "random",
       "distribution": null,
       "formula": null
+    },
+    {
+      "name": "campo",
+      "null_percentage": 0,
+      "type": "Custom List",
+      "values": [
+        "SI",
+        "NO"
+      ],
+      "selectionStyle": "random",
+      "distribution": null,
+      "formula": null
     }
   ]
 }
