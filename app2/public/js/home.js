@@ -6,7 +6,7 @@ $(document).ready(function() {
     if (form.valid() && boxes) {
       return
     } else {
-      console.log("fail")
+      alert("Todos los campos son necesarios")
     }
     e.preventDefault()
   })

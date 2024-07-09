@@ -279,7 +279,6 @@ $(document).ready(function() {
     select8.html(rendered_regime)
   })
 
-  //form evaluation
   form.validate({
     rules: {
       anyo: {
@@ -296,7 +295,13 @@ $(document).ready(function() {
       },
       regime: {
         required: true
-      }
+      },
+      cicle: {
+        required: true
+      },
+      camp: {
+        required: true
+      },
     }
   })
 })
