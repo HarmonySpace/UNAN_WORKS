@@ -1,9 +1,0 @@
-
-.error-message {
-	position: fixed;
-	top: 3rem;
-	right: 5rem;
-}
-.error-message .bold {
-	font-weight: bold;
-}
