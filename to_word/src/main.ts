@@ -13,13 +13,24 @@ if (appElement) {
     <p class="read-the-docs">
       Click en el botón para crear un word con el contenido actual
     </p>
+    <div id="div1" class="card page-break">
+      <p class="read-the-docs">
+        Click en el botón para crear un word con el contenido actual
+      </p>
+    </div>
+    <div id="div2" class="card page-break"">
+      <p class="read-the-docs">
+        Click en el botón para crear un word con el contenido actual
+      </p>
+    </div>
   </div>
-  `
+  `;
 }
 
 const d_word_button = document.querySelector<HTMLButtonElement>("#d_word");
-const d_export = document.querySelector<HTMLDivElement>("#export");
-if (d_word_button && d_export) {
-  Export2Word(d_word_button, d_export, "document");
+const div1 = document.querySelector<HTMLDivElement>("#div1");
+const div2 = document.querySelector<HTMLDivElement>("#div2");
+if (d_word_button && div1 && div2) {
+	Export2Word(d_word_button, [div1, div2], "document");
 }
 //setupCounter(document.querySelector<HTMLButtonElement>('#counter')!);
